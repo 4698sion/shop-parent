@@ -65,8 +65,8 @@
 				<entry key="hot_goods_list" value-ref="hotGoodsListDirective" />
 				<entry key="product_category_parent_list" value-ref="productCategoryParentListDirective" />
 				<entry key="attribute_list" value-ref="attributeDirective" />
-				<!--
 				<entry key="friend_link_list" value-ref="friendLinkListDirective" />
+				<!--
 				 -->
 				
 			</map>

@@ -136,7 +136,7 @@ $().ready(function() {
 													[/@brand_list]
 												</div>
 											</div>
-											
+
 											[#--展开分类--]
 											<div class="menu">
 												[@product_category_children_list productCategoryId = productCategory.id count=7]
@@ -157,7 +157,7 @@ $().ready(function() {
 														[/#list]
 													[/#if]
 												[/@product_category_children_list]
-											
+
 											<div class="auxiliary">
 												[@brand_list productCategoryId = productCategory.id count = 8]
 													[#if brands?has_content ]
@@ -185,7 +185,7 @@ $().ready(function() {
 												[/@promotion_list]
 											</div>
 										</div>
-											
+
 										</li>
 									[/#list]
 								[/#if]
@@ -194,14 +194,14 @@ $().ready(function() {
 						</ul>
 				</div>
 			</div>
-			
+
 			[#--广告1--]
 			<div class="span10">
-				[@ad_position id=1 /]		
+				[@ad_position id=1 /]
 			</div>
 		</div>
-		
-		[#--第二个广告位--]		
+
+		[#--第二个广告位--]
 		<div class="row">
 			<div class="span9">
 				[@ad_position id=2 /]
@@ -217,7 +217,7 @@ $().ready(function() {
 							</li>
 						[/#list]
 					</ul>
-					
+
 					[#--获取文章分类下的文章--]
 					[#list articleCategories as articleCategory ]
 						[@article_list categoryId=articleCategory.id count= 6 ]
@@ -230,7 +230,7 @@ $().ready(function() {
 							</ul>
 						[/@article_list]
 					[/#list]
-					
+
 				[/#if]
 			[/@article_category_root_list]
 				</div>
@@ -240,10 +240,10 @@ $().ready(function() {
 			<div class="span12">
 				<div class="middleAd">
 					[@ad_position id = 3 /]
-				</div>			
+				</div>
 			</div>
 		</div>
-		
+
 		[#--热门商品展示--]
 		[#--获取三个分类--]
 		[@product_category_root_list count = 3]
@@ -252,7 +252,7 @@ $().ready(function() {
 					[#assign adIterator = adPosition.ads.iterator() /]
 				[/#if]
 			[/@ad_position]
-			
+
 			[#--循环分类--]
 			[#list productCategories as productCategory ]
 			<div class="row">
@@ -270,9 +270,9 @@ $().ready(function() {
 									</dd>
 								[/#list]
 							[/@product_category_children_list]
-							
+
 						</dl>
-						
+
 						[#--广告位--]
 						[#if adIterator?? && adIterator.hasNext()]
 							[#assign ad = adIterator.next() /]
@@ -286,7 +286,7 @@ $().ready(function() {
 								[/#if]
 							</div>
 						[/#if]
-						
+
 						[#--分类下的热门商品开始--]
 						[@goods_list productCategoryId = productCategory.id count = 10 tagId = 3]
 							<ul>
@@ -318,206 +318,40 @@ $().ready(function() {
 				</div>
 			</div>
 			[/#list]
-			
+
 		[/@product_category_root_list]
-		
-					
-		
+
+
+
 		<div class="row">
 			<div class="span12">
 				<div class="bottomAd">
-					<ul>
-						<li>
-							<a href="#">
-								<img src="http://image.demo.shopxx.net/4.0/201501/e44f5fe1-523d-4ba5-af75-c60ff9125ed4.jpg" alt="数码相机" title="数码相机" />
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="http://image.demo.shopxx.net/4.0/201501/b955bbb2-b9ad-4e6b-9dc2-5159a18cdaee.jpg" alt="智能手表" title="智能手表" />
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="http://image.demo.shopxx.net/4.0/201501/dff83843-d61a-4406-9a00-1d5efe7fbe38.jpg" alt="智能手机" title="智能手机" />
-							</a>
-						</li>
-					</ul>
-				</div>			
+					[@ad_position id =5 /]
+				</div>
 			</div>
 		</div>
-		
+
+		[#--热门品牌--]
 		<div class="row">
 			<div class="span12">
 				<div class="hotBrand">
 					<ul class="clearfix">
-							<li>
-								<a href="" title="苹果">
-									<img src="http://image.demo.shopxx.net/4.0/201501/a8275260-f9fa-4e20-8173-35b755fabb14.gif" alt="苹果" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="三星">
-									<img src="http://image.demo.shopxx.net/4.0/201501/8aa08a42-f5b3-4f52-bea0-5ee8bd123b0c.gif" alt="三星" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="索尼">
-									<img src="http://image.demo.shopxx.net/4.0/201501/dd75c116-51a7-4fbd-b014-6cf4bedcd0bb.gif" alt="索尼" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="华为">
-									<img src="http://image.demo.shopxx.net/4.0/201501/2a5efa56-c4cd-4984-b11a-d56cadca6cff.gif" alt="华为" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="魅族">
-									<img src="http://image.demo.shopxx.net/4.0/201501/72657c6c-d279-4952-ac20-1abcff776b07.gif" alt="魅族" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="佳能">
-									<img src="http://image.demo.shopxx.net/4.0/201501/081d4e29-b631-4a49-8672-792a1308ce97.gif" alt="佳能" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="尼康">
-									<img src="http://image.demo.shopxx.net/4.0/201501/5bd8bec2-f2df-4c84-937a-6eead637abd4.gif" alt="尼康" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="松下">
-									<img src="http://image.demo.shopxx.net/4.0/201501/e921d086-358d-4610-9a53-b46a551b6557.gif" alt="松下" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="戴尔">
-									<img src="http://image.demo.shopxx.net/4.0/201501/1ff77e2d-6190-4fea-9e12-be75d2d4ce83.gif" alt="戴尔" />
-								</a>
-							</li>
-							<li>
-								<a href="" title="惠普">
-									<img src="http://image.demo.shopxx.net/4.0/201501/271e4fc7-4451-488b-9d10-a7f80b41d719.gif" alt="惠普" />
-								</a>
-							</li>
+						[@brand_list count=10]
+							[#list brand as  brand]
+								<li>
+									<a href="${ctx}/brand/${brand.id}">
+										<img src="${brand.logo}" alt="${brand.name}">
+									</a>
+								</li>
+							[/#list]
+						[/@brand_list]
 					</ul>
 				</div>
 			</div>
 		</div>
-		
-		
+
 	</div>
-<div class="footer">
-	<div class="service clearfix">
-		<dl>
-			<dt class="icon1">新手指南</dt>
-			<dd>
-				<a href="#">购物流程</a>
-			</dd>
-			<dd>
-				<a href="#">会员注册</a>
-			</dd>
-			<dd>
-				<a href="#">购买宝贝</a>
-			</dd>
-			<dd>
-				<a href="#">支付货款</a>
-			</dd>
-			<dd>
-				<a href="#">用户协议</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt class="icon2">特色服务</dt>
-			<dd>
-				<a href="#">购物流程</a>
-			</dd>
-			<dd>
-				<a href="#">会员注册</a>
-			</dd>
-			<dd>
-				<a href="#">购买宝贝</a>
-			</dd>
-			<dd>
-				<a href="#">支付货款</a>
-			</dd>
-			<dd>
-				<a href="#">用户协议</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt class="icon3">支付方式</dt>
-			<dd>
-				<a href="#">购物流程</a>
-			</dd>
-			<dd>
-				<a href="#">会员注册</a>
-			</dd>
-			<dd>
-				<a href="#">购买宝贝</a>
-			</dd>
-			<dd>
-				<a href="#">支付货款</a>
-			</dd>
-			<dd>
-				<a href="#">用户协议</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt class="icon4">配送方式</dt>
-			<dd>
-				<a href="#">购物流程</a>
-			</dd>
-			<dd>
-				<a href="#">会员注册</a>
-			</dd>
-			<dd>
-				<a href="#">购买宝贝</a>
-			</dd>
-			<dd>
-				<a href="#">支付货款</a>
-			</dd>
-			<dd>
-				<a href="#">用户协议</a>
-			</dd>
-		</dl>
-		<div class="qrCode">
-			<img src="/images/qr_code.gif" alt="官方微信" />
-			官方微信
-		</div>
-	</div>
-	<div class="bottom">
-		<div class="bottomNav">
-			<ul>
-				[@navigation_list position = 2]
-					[#list navigations as navigation]
-						<li>
-							<a href="${ctx}${navigation.url}" [#if navigation.isBlankTarget] target="_blank"[/#if]>
-							${navigation.name}</a>
-							[#if navigation_has_next]|[/#if]
-						</li>
-					[/#list]
-				[/@navigation_list]
-			</ul>
-		</div>
-		<div class="info">
-			<p>湘ICP备10000000号</p>
-			<p>Copyright © 2005-2015 尚HAI购 版权所有</p>
-			[#-- 
-			[@friend_link_list count = 10]
-				<ul>
-					[#list friendLinks as friendLink]
-						<li>
-							<a href="" target="_blank">
-								<img src="" alt="" />
-							</a>
-						</li>
-					[/#list]
-				</ul>
-			[/@friend_link_list]--]
-		</div>
-	</div>
-</div>
+	[#--底部--]
+	[#include "include/footer.ftl"]
 </body>
 </html>
